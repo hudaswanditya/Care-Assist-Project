@@ -1,0 +1,10 @@
+{
+  "log": ["*"],
+  "databases": {
+    "care_assist": {
+      "server": "http://94.177.230.91:8091",
+      "bucket": "care_assist",
+      "users": { "GUEST": { "disabled": false, "admin_channels": ["*"] } }
+    }
+  }
+}

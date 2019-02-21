@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todo_for_route"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:padding="5dp">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="0.04"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        style="@style/AppTextNormalLight"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.05"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    </LinearLayout>
+
+</LinearLayout>

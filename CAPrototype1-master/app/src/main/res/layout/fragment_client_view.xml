@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.careassist.app.Todo.ClientView">
+
+    <FrameLayout
+        android:id="@+id/todos"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        tools:layout="@layout/fragment_todo_list" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+
+    <FrameLayout
+        android:id="@+id/todoNotes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        tools:layout="@layout/fragment_to_do_notes" />
+
+</LinearLayout>

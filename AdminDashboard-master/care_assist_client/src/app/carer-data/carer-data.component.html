@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-3 space-top-medium">
+    <!--free to use images: https://www.pexels.com/search/person/-->
+    <img src="../assets/img/{{carer.firstName}}.jpg" alt="" style="border-radius: 50%; width:80%;height:auto;">
+  </div>
+  <div class="col-md-4">
+    <h1 style="color:rgb(33, 150, 243);">
+      {{carer.firstName}}
+    </h1>
+    <h2 style="color:rgb(33, 150, 243);">
+      {{carer.lastName}}
+    </h2>
+    <p>
+      Email: {{carer.email}}
+    </p>
+    <p>
+      Role: {{carer.role}}
+    </p>
+    <a class="btn btn-success" [routerLink]="['/carer/', carer.id, 'route']">Neue Route hinzufügen</a>
+    <br>
+    <a class="btn btn-primary space-top-medium" [routerLink]="['/']">Zurück zu Ansicht aller Pflegekräfte</a>
+
+  </div>
+</div>
+<div class="row space-top-medium">
+<hr>
+  <div class="col-md-5 col-md-offset-1">
+    <h2 style="color:rgb(33, 150, 243);">Heutige & bevorstehende Termine:</h2>
+    <ul  *ngFor="let appointment of appointmentkeys" >
+      <li *ngIf="compareDateUpcoming(appointment)">
+        <h4>{{appointment | date: 'dd/MM/yyyy'}}</h4>
+        <ul *ngFor="let item of appointments[appointment]">
+          <div *ngFor="let client of clients">
+            <li  *ngIf="item.clientID == client.id">
+              <h5>{{item.start}} - {{item.end}} : {{client.firstName}} {{client.lastName}}</h5>
+              <div *ngFor="let todo of client['toDos'][appointment]">
+                <p>- {{todo.task.name}} ({{todo.task.done ? 'fertig' : 'noch nicht fertig'}})</p>
+
+              </div>
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-5 col-md-offset-1">
+    <h2 style="color:rgb(33, 150, 243);">Vergangene Termine:</h2>
+    <ul  *ngFor="let appointment of appointmentkeys" >
+      <li *ngIf="compareDate(appointment)">
+        <h4 >{{appointment | date: 'dd/MM/yyyy'}}</h4>
+        <ul *ngFor="let item of appointments[appointment]">
+          <div *ngFor="let client of clients">
+            <li  *ngIf="item.clientID == client.id">
+              <h5>{{item.start}} - {{item.end}} : {{client.firstName}} {{client.lastName}}</h5>
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

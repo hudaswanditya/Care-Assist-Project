@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h1>
+      Neue Tagesroute für {{carer?.firstName}} {{carer?.lastName}}
+    </h1>
+    <br>
+    Datum : <input [(ngModel)]="dateAuswahl" (ngModelChange)="getDateChange()"  on type="date" name="bday">
+    <br>
+    <hr>
+  </div>
+  <div class="col-md-6">
+
+    <h2>Klienten: </h2>
+    <!-- <select [(ngModel)]="selectedClient">
+        <option *ngFor="let client of clients" [attr.value]="client.id">{{client.lastName}}, {{client.firstName}}</option>
+    </select> -->
+    <div *ngFor="let client of clientsOnCheck" class="space-top-medium">
+      <input type="checkbox" [checked]="client.checked" (change)="client.checked = !client.checked; addtoTemp(client.checked,client.id); //setFollowingTime(client.id);" [attr.value]=""> <b>{{client.lastName}}, {{client.firstName}} </b><br>
+
+      <div *ngIf="client.checked">
+        von:
+        <input type="time" [(ngModel)]="startTime[client.id]" (ngModelChange)="endTime[client.id] = (this.timeToDo[client.id] == undefined )? timeCalculation(startTime[client.id],30,0) : timeCalculation(startTime[client.id],this.timeToDo[client.id],0); setFollowingTime(client.id)" name="usr_time" required>
+        bis:
+        <input type="time" [(ngModel)]="endTime[client.id]"  (ngModelChange)="setFollowingTime(client.id)"name="usr_time" required>
+        <br>
+        <ul>
+          <li *ngFor="let task of client.tasks">
+            <input type="checkbox" [checked]="task.checked" (change)="task.checked = !task.checked;  addToTempTask(client.id, task.id, task.task, task.checked); setFollowingTime(client.id); "> {{task.task.name}}
+          </li>
+        </ul>
+        <p>{{timeToDo[client.id] == undefined ? "" : "Bearbeitungszeit: ca." +timeToDo[client.id] + " Minuten"}} </p>
+      </div>
+      <hr>
+    </div>
+    <br>
+    <a class="btn {{buttonState == 'zur Liste hinzufügen' ? 'btn-success': 'btn-warning'}}" (click)="addList();">{{buttonState}}</a>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <div class="col-md-6" *ngIf="routeList!=null">
+    <h2>
+      Tagesroute:
+    </h2>
+    <div *ngFor="let selcl of routeList">
+      <div *ngFor="let client of clients;" >
+        <div class="space-top-medium" *ngIf="selcl.clientID == client.id">
+          <p>{{selcl.start}} - {{selcl.end}} : {{client.firstName}} {{client.lastName}}</p>
+          <ul>
+            <li *ngFor="let task of selcl.tasks">
+              <p> {{client.generalTasks[task]['name']}}</p>
+            </li>
+          </ul>
+          <!-- <a class="btn btn-danger" (click)="removeList();">remove</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-md-offset-8 space-top-medium">
+
+    <a class="btn btn-warning" [routerLink]="['/carer', id]">
+      Zurück
+    </a>
+    <a class="btn btn-success" (click)="saveRoute();">
+      Tagesroute speichern
+    </a>
+  </div>
+</div>

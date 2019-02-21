@@ -1,0 +1,30 @@
+{
+	"log": ["HTTP+","CRUD+", "REST+", "Changes+", "Attach+"],
+	"adminInterface": "0.0.0.0:4985",
+	"interface": "0.0.0.0:4984",
+	"databases": {
+		"care_assist": {
+			"server": "http://94.177.230.91:8091",
+			"sync":`
+                function (doc) {
+                    channel (doc.channels);
+                }
+            `,
+      "bucket": "care_assist",
+			"users": {
+				"GUEST": {
+					"disabled": false,
+					"admin_channels": ["*"]
+				}
+			}
+		}
+	},
+	"CORS": {
+        "Origin": ["http://api.huda-swanditya.com:3000"],
+        "LoginOrigin": ["http://api.huda-swanditya:3000"],
+        "Headers": ["Content-Type"],
+        "MaxAge": 17280000
+  },
+	"SSLCert": "cert.pem",
+  "SSLKey": "privkey.pem"
+}

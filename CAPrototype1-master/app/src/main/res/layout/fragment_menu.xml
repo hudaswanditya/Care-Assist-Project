@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.careassist.app.MenuFragment"
+    android:background="@color/colorPrimaryLight"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp">
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:id="@+id/back_to_clients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:srcCompat="?android:attr/actionModeCloseDrawable"/>
+
+    <TextView
+        android:id="@+id/client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/back_to_clients"
+        style="@style/AppTextMenu"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/client_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aufgaben"
+        android:layout_below="@id/client_name"
+        style="@style/AppTextMenu"
+        />
+    <TextView
+        android:id="@+id/basic_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_data"
+        style="@style/AppTextMenu"
+        android:layout_below="@id/client_view"/>
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verlauf"
+        style="@style/AppTextMenu"
+        android:layout_below="@id/basic_data"/>
+    <TextView
+        android:id="@+id/vital_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vital_value"
+        style="@style/AppTextMenu"
+        android:layout_below="@id/log"/>
+    <TextView
+        android:id="@+id/medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medikation"
+        style="@style/AppTextMenu"
+        android:layout_below="@id/vital_values"/>
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:layout_alignParentBottom="true"
+        style="@style/AppButtonLight"/>
+
+    <TextView
+        android:id="@+id/logedInAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/checkout"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp" />
+
+</RelativeLayout>

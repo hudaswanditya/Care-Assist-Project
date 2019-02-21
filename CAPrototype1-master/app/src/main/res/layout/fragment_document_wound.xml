@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:id="@+id/tabletop">
+
+        <FrameLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ScrollView>
+
+        </HorizontalScrollView>
+        -->
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/addRowB"
+            android:layout_weight="0.5"
+            android:text="@string/addRow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/AppButtonLight"
+            android:paddingBottom="0dp"/>
+
+        <Button
+            android:id="@+id/saveStuff"
+            android:layout_weight="0.5"
+            android:text="@string/saveContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/AppButtonLight"
+            android:paddingBottom="0dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

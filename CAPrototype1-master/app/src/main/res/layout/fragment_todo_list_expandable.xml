@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/undone_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        style="@style/AppTextHeadline"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageButton
+            android:id="@+id/prevToDos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/today_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:text="Heute"
+            android:background="@color/colorAccent"/>
+
+        <ImageButton
+            android:id="@+id/nextToDos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            android:background="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/todolist"
+        android:name="de.carassist.app.TodoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        tools:context="de.careassist.app.Todo.TodoFragment"
+        tools:listitem="@layout/fragment_todo"
+        android:groupIndicator="@null"
+        android:divider="@color/colorPrimaryLight"/>
+
+    <!--ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/-->
+
+    <ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/todolist_done"
+        android:name="de.careassist.app.TodoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        tools:context="de.careassist.app.Todo.TodoFragment"
+        tools:listitem="@layout/fragment_todo"
+        android:groupIndicator="@null"
+        android:divider="@color/colorPrimaryLight"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_control_point_white_24dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        app:layout_anchor="@id/fragment_container"
+        app:layout_anchorGravity="bottom|right|end" /><!--16 dp für handys, 24 für tablets-->
+    />
+
+</LinearLayout>

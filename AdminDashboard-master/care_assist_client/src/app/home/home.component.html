@@ -1,0 +1,30 @@
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3 text-center">
+        <h2 style="color:rgb(33, 150, 243);">&#10095; Pflegekräfte</h2>
+    </div>
+    <div class="col-md-3 text-center">
+        <a [routerLink]="['/client']"><h2>Klienten</h2></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 space-top-medium" *ngFor="let carer of carers">
+      <div class="row">
+        <div class="col-md-6">
+          <!--free to use images: https://www.pexels.com/search/person/-->
+          <img src="../assets/img/{{carer.firstName}}.jpg" alt="" style="border-radius:50%; width:100%;height:auto;">
+        </div>
+        <div class="col-md-6">
+            <h2>
+              {{carer.firstName}}
+            </h2>
+            <h3>
+              {{carer.lastName}}
+            </h3>
+            <p> {{carer.role}} </p>
+          <a class="btn btn-warning" [routerLink]="['/carer', carer.id]">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- EditText settings -->
+        <item name="colorControlNormal">@color/colorPrimaryText</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTextNormal" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/colorPrimaryTextWhite</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Text on light background -->
+    <style name="AppTextNormalLight" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTextNormalHighlight" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTextSmall" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTextVerySmall" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppTextTable" parent="@style/AppTextSmall">
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="AppTextHeadline" parent="@style/AppTextNormal">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <!-- RouteActivity -->
+    <style name="AppTextRouteNormal" parent="@style/AppTextNormal">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="AppTextRouteSmall" parent="@style/AppTextNormal">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="AppTextMenu" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppButton" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textColor">@color/colorIcon</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="AppButtonLight" parent="AppButton">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="DialogHeadline" parent="AppTextNormal">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Autocomplete">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Text in AppBar -->
+    <style name="MyTextTitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <style name="TextAppearance.Widget.ActionBar.Subtitle"
+        parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/colorPrimaryTextWhite</item>
+    </style>
+</resources>

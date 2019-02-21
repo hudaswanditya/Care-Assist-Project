@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">Care Assist</string>
+
+    <!-- Strings related to login -->
+
+    <string name="logInDescription">Bitte gib deinen Benutzernamen und dein Passwort ein.</string>
+    <string name="weiter">Weiter</string>
+    <string name="benutzername">Benutzername</string>
+
+    <!-- Menu-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="client">Klienten</string>
+    <string name="basic_data">Stammdaten</string>
+    <string name="vital_value">Vitalwerte</string>
+    <string name="logout">Abmelden</string>
+
+    <!-- Wound Documentation-->
+    <string name="wounddate">Datum</string>
+    <string name="woundphase">Wundphase</string>
+    <string name="woundsizel">Wunddlänge</string>
+    <string name="woundsizew">Wundbreite</string>
+    <string name="woundsized">Wundtiefe</string>
+    <string name="wounddescription">Wundbeschreibung</string>
+    <string name="woundkindfrequency">Art und Häufigkeit der Wundversorgung</string>
+    <string name="hdz">Hdz</string>
+    <string name="addRow">Zeile hinzufügen</string>
+    <string name="saveContent">Speichern</string>
+    <string name="showpicture">Bild  anzeigen</string>
+    <string name="addpicture">Bild hinzufügen</string>
+
+    <string name="wounddocname">Wunddokumentation</string>
+    <string name="mobdocname">Mobilisations Lagerungsplan</string>
+    <string name="mobdestination">Mobilisierungsziel</string>
+    <string name="mobMeasures">Mobilisierungsmaßnahmen</string>
+    <string name="mobcharacteristics">Besonderheiten</string>;
+    <string name="mobtime">Uhrpunkt</string>
+    <string name="woundlocation">Lokation</string>
+
+    <string name="doctorialprescription1">Ärztlich Verordnung 1 Verbandswechsel etc</string>
+    <string name="doctorialprescription2">Ärztlich Verordnung 2 Injektion Infusion</string>
+    <string name="doctorialprescription3">Ärztlich Verordnung 3 Sonderkost parenterale Ernährung</string>
+    <string name="doctpre1hdz">Hdz. Pflege</string>
+    <string name="doctorname">Arztname</string>
+    <string name="doctorialmeasure">ärztlich verordnete Maßnahme</string>
+    <string name="frequency">Häufigkeit</string>
+    <string name="dochdz">Hdz. Arzt</string>
+    <string name="endon">abgesetzt am</string>
+    <string name="injec_infu">Injektion/Infusion</string>
+    <string name="specialdiet">Verabreichung von Sondenkost / enterale Ernährung </string>
+
+    <string name="picture">Bild</string>
+    <string name="saved">gespeichert</string>
+
+    <!-- Add shiftedNote alert -->
+    <string name="dialog_add_note_title">Neue Notiz</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="confirm">Bestätigen</string>
+
+
+
+    <string name="tag">Stichwort</string>
+    <string name="input_tags">Gib hier ein treffendes Stichwort ein</string>
+    <string name="input_description">Beschreibung (optional)</string>
+    <string name="text_not_set">Dieses Feld ist erforderlich!</string>
+    <string name="date">Zeit</string>
+    <string name="shiftedNote">Notiz</string>
+    <string name="carer">Pfleger</string>
+    <string name="logbook_searchbar_search">Suchen…</string>
+    <string name="new_note">Gib hier eine neue Notiz ein</string>
+    <string name="add_new">Erstelle neue(n)…</string>
+    <string name="task">Aufgabe</string>
+    <string name="add_new_todo">Neue Aufgabe</string>
+    <string name="today">Heute</string>
+    <string name="tomorrow">Nächster Termin</string>
+    <string name="day_after_tomorrow">Übernächster Termin</string>
+    <string name="note">Notiz</string>
+
+    <!-- Strings related to login -->
+    <string name="action_sign_in_short">Anmelden</string>
+    <string name="error_invalid_email">Die Email ist nicht korrekt</string>
+    <string name="error_invalid_password">Das Passwort ist zu kurz</string>
+    <string name="error_incorrect_password">Das Passwort ist falsch</string>
+    <string name="error_field_required">Dieses Feld ist erforderlich </string>
+    <string name="title_activity_login">Anmelden</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- profile/settings -->
+    <string name="settingsHeadline">Einstellungen</string>
+    <string name="colorSettingsHeadline">Farbschema</string>
+    <string name="fontSize">große Schrift</string>
+
+    <string name="name">Name</string>
+    <string name="username">Benutzername</string>
+    <string name="role">Rolle</string>
+    <string name="password">Passwort</string>
+    <string name="changePassword">Passwort ändern</string>
+    <string name="changeUsername">Benutzernamen ändern</string>
+    <string name="email">E-Mail</string>
+    <string name="profileToast">Du befindest dich bereits auf deiner Profilseite</string>
+
+    <!-- history -->
+    <string name="historyHeadline">Verlauf seit deinem letztem Besuch</string>
+    <string name="error_not_equal_passwords">Die neuen Passwörter sind nicht gleich</string>
+    <string name="success_changed_password">Dein Passwort wurde erfolgreich geändert</string>
+
+    <!-- stammdaten -->
+    <string name="stammdatenHeadline">Stammdaten</string>
+    <string name="dateofbirth">Geburtsdatum</string>
+    <string name="address">Adresse</string>
+    <string name="careLevel">Pflegestufe</string>
+    <string name="diagnosis">Diagnosen</string>
+    <string name="contactPersons">Kontaktpersonen</string>
+
+    <string name="drawer_close">Close drawer</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="add">Hinzufügen</string>
+
+    <string name="new_hint">Gib hier bitte einen neuen Hinweis ein</string>
+
+</resources>

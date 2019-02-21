@@ -1,0 +1,1 @@
+couchbase-sync-gateway  3  macosx-x86_64

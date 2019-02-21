@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 space-top-medium">
+    <img src="/assets/img/{{getImagePath(client['firstName'])}}.png" alt="" style="width:90%;height:auto;">
+  </div>
+  <div class="col-md-4">
+    <h1 style="color:rgb(33, 150, 243);">
+      {{client.firstName}}
+    </h1>
+    <h2 style="color:rgb(33, 150, 243);">
+      {{client.lastName}}
+    </h2>
+    <br>
+    <p>
+      Adresse: {{client.address}}
+    </p>
+    <p>
+      Geburtsdatum: {{client.birthDate}}
+    </p>
+    <br>
+    <h4> Kontakt zu Angehörigen:</h4>
+    <ul>
+      <li *ngFor="let item of client['phoneNumber']">
+        <p>Name: {{item.name}}</p>
+        <p>Telefonnummer: {{item.number}} </p>
+        <p>Verhältnis: {{item.relation}} </p>
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-8 col-md-offset-2 space-top-medium">
+    <hr>
+    <h4> Allgemeine Aufgaben:</h4>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Aufgabe</th>
+        <th class="text-center">Bearbeitungszeit in Minuten</th>
+        <th class="text-center">Häufigkeit in Tagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of client['generalTasks']">
+        <td>{{item.name}}</td>
+        <td class="text-center">{{item.approximateDurationInMinutes}}</td>
+        <td class="text-center">{{item.frequencyInDays}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-primary" [routerLink]="['/client']">Zurück</a>
+  </div>
+</div>

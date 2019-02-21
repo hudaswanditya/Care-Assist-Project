@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/transparent"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_expand_more_black_24dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            style="@style/AppTextNormal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageButton
+            android:id="@+id/add_note"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:layout_toLeftOf="@+id/shift_task"
+            app:srcCompat="@android:drawable/stat_notify_chat"
+            android:tint="@color/colorIcon"/>
+
+        <ImageButton
+            android:id="@+id/shift_task"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:layout_toLeftOf="@+id/info"
+            android:src="@drawable/ic_today_black_24dp"
+            android:tint="@color/colorIcon"/>
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/checkBox"
+            android:src="@drawable/ic_help_black_24dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:tint="@color/colorIcon"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:buttonTint="@color/colorIcon"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
